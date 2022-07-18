@@ -2,3 +2,13 @@ body {
    background-color: #e2e2e2;
    color: #f20
 }
+header {
+   width:  100%;
+   background-color: blue;
+}
+
+header .wrapper {
+    width:  100%;
+    max-width: 1200px;
+    background-color: #999;
+}
