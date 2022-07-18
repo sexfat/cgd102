@@ -12,3 +12,7 @@ header .wrapper {
     max-width: 1200px;
     background-color: #999;
 }
+footer {
+    width: 100%;
+
+}
