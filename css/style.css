@@ -40,6 +40,15 @@ h2 {
   width: 100%;
   margin: 0 10px;
 }
+.wrapper_full header nav ul li a {
+  color: red;
+}
+.wrapper_full header nav ul li a:hover {
+  color: darkmagenta;
+}
+.wrapper_full header nav ul li a::before {
+  content: "";
+}
 .wrapper_full section {
   width: 100vw;
   height: 80vh;
