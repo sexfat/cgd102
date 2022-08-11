@@ -1,4 +1,7 @@
 header {
+    @include rect(100% , 300px);
+    @include boxcenter();
+    
     h1 {
        width: 80px;
        height: 80px;

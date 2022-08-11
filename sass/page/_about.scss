@@ -1,4 +1,19 @@
 .about {
+    @include  rect(1200px ,400px);
+    @include boxcenter();
 
+}
+@include m() {
+    .about {
+      @include  rect(100% ,200px)
+    }
+      
+}
+
+@include t() {
+  .about {
+    @include  rect(1024px ,200px)
+  }
     
 }
+

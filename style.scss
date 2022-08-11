@@ -2,6 +2,11 @@
 // sass 註解
 //base
 @import 'sass/base/var';
+
+//mixin
+@import 'sass/mixin/mixins';
+
+
 //component
 @import 'sass/component/btn';
 //layout
@@ -13,27 +18,20 @@
 @import 'sass/page/about';
 
 
-
-@mixin marginTop10(){
-   margin-top: 10px;
-}
+ // mixin
 
 
-@mixin boxcenter(){
-    margin: 0 auto;
-}
 
-@mixin full(){
-   width: 100vw;
-   height: 100vh;
-}
-
+// call
 
 section {
   @include marginTop10();
-  width:300px;
+  @include rect(100vw , 300px);
   @include boxcenter()
 }
+
+
+
 
 .wrapper {
    @include marginTop10();

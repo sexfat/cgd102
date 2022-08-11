@@ -2,3 +2,24 @@
 //index
 
 }
+
+@include m() {
+    .index {
+      @include  rect(100% ,200px)
+    }
+      
+}
+
+
+.box {
+   width: 300px;
+   @include m(){
+    width:  100%;
+   }
+   @include t(){
+     width:  80%;
+   }
+ 
+
+
+}
