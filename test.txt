@@ -1,2 +1,0 @@
-user.name=CHOST\TibaMe-User
-user.email=silvia.huang@gmail.com

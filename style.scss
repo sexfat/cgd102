@@ -1,0 +1,45 @@
+/*css 註解*/
+// sass 註解
+
+$fontSize : 18px;// number
+$title_h1 : 36px;// number
+$h1_space : 5px 8px 20px 10px; // list
+$bodyColor : #333;// color
+$bodybgColor : #e2e2e2 ;//color
+$null : null; //空值
+$title : h2;
+
+body {
+  font-size: $fontSize;
+  margin: 0;
+  padding: $null;
+  color: $bodyColor;
+}
+
+h1 {
+  font-size: $title_h1;
+  margin: $h1_space;
+}
+
+#{$title} {
+    font-size: 20px;
+}
+
+
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+}
+
+
+//變數範圍
+$a : 14px;
+
+.font {
+  font-size: $a;
+}
+
+.font1 {
+   font-size: $a;
+}
