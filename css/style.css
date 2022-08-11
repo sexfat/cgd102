@@ -1,62 +1,5 @@
 @charset "UTF-8";
 /*css 註解*/
-body {
-  font-size: 18px;
-  margin: 0;
-  color: #333;
-}
-
-h1 {
-  font-size: 36px;
-  margin: 5px 8px 20px 10px;
-}
-
-h2 {
-  font-size: 20px;
-}
-
-.font {
-  font-size: 20px;
-}
-
-.font1 {
-  font-size: 14px;
-}
-
-.wrapper_full {
-  width: 100%;
-}
-.wrapper_full header h1 {
-  width: 80px;
-  height: 80px;
-  background-color: #333;
-}
-.wrapper_full header nav ul {
-  list-style: none;
-}
-.wrapper_full header nav ul li {
-  display: inline-block;
-  min-width: 120px;
-  width: 100%;
-  margin: 0 10px;
-}
-.wrapper_full header nav ul li a {
-  color: red;
-}
-.wrapper_full header nav ul li a:hover {
-  color: darkmagenta;
-}
-.wrapper_full header nav ul li a::before {
-  content: "";
-}
-.wrapper_full section {
-  width: 100vw;
-  height: 80vh;
-}
-.wrapper_full footer nav {
-  width: 100%;
-  height: 150px;
-}
 .btn {
   text-align: center;
   font-size: 18px;
@@ -81,6 +24,51 @@ h2 {
 }
 .btn-radius {
   border-radius: 10px;
+}
+
+header h1 {
+  width: 80px;
+  height: 80px;
+  background-color: #333;
+}
+header nav ul {
+  list-style: none;
+}
+header nav ul li {
+  display: inline-block;
+  min-width: 120px;
+  width: 100%;
+  margin: 0 10px;
+}
+header nav ul li a {
+  color: red;
+}
+header nav ul li a:hover {
+  color: darkmagenta;
+}
+header nav ul li a::before {
+  content: "";
+}
+
+footer nav {
+  width: 100%;
+  height: 150px;
+}
+section {
+  margin-top: 10px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  margin-top: 10px;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.banner {
+  width: 100vw;
+  height: 100vh;
 }
 
 /*# sourceMappingURL=style.css.map */

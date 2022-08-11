@@ -1,144 +1,48 @@
 /*css 註解*/
 // sass 註解
-
-$fontSize : 18px; // number
-$title_h1 : 36px; // number
-$h1_space : 5px 8px 20px 10px; // list
-$bodyColor : #333; // color
-$bodybgColor : #e2e2e2; //color
-$null : null; //空值
-$title : h2;
-
-body {
-    font-size: $fontSize;
-    margin: 0;
-    padding: $null;
-    color: $bodyColor;
-}
-
-h1 {
-    font-size: $title_h1;
-    margin: $h1_space;
-}
-
-#{$title} {
-    font-size: 20px;
-}
-
-$smallFont: 13px;
+//base
+@import 'sass/base/var';
+//component
+@import 'sass/component/btn';
+//layout
+@import 'sass/layout/login';
+@import 'sass/layout/header';
+@import 'sass/layout/footer';
+//page
+@import 'sass/page/index';
+@import 'sass/page/about';
 
 
 
-//變數範圍
-$a : 14px; //全域變數
-
-.font {
-    $a: 20px; //區域變數
-    font-size: $a;
-}
-
-.font1 {
-    font-size: $a;
+@mixin marginTop10(){
+   margin-top: 10px;
 }
 
 
-$full : full;
-
-
-// 巢狀寫法
-.wrapper_full {
-    // 判斷式
-   @if $full == full {
-    width: 100%;
-   
-   }@else if $full == fixed{
-    width: 1200px;
+@mixin boxcenter(){
     margin: 0 auto;
-   }
-
-    header {
-        h1 {
-           width: 80px;
-           height: 80px;
-           background-color: #333;   
-        }
-        nav {
-          ul {
-            list-style: none;
-            li {
-            display: inline-block;
-             min-width: 120px;
-             width: 100%;
-             margin:0 10px;
-             a {
-              color: red;
-              // 偽元素
-              &:hover {
-                color: darkmagenta;
-              }
-              &::before {
-                content: '';
-              }  
-             }
-            //  a:hover {
-            //     color: darkmagenta;
-            //  }
-            }
-          }
-
-        }
-    }
-
-    section {
-        width: 100vw;
-        height: 80vh;
-    }
-
-    .container {
-        //content
-    }
-
-    footer {
-       nav {
-        width: 100%;
-        height: 150px;
-       }
-       .subnav {
-          ul {
-           li {
-
-
-           } 
-          }
-
-       } 
-    }
-
 }
 
-//
-.btn {
-  text-align: center;
-  font-size: 18px;
-  border: 1px solid #333;
-  padding: 5px 10px;
-  width: 120px;
-  background-color: #333;
-  transition: all 0.3 cubic-bezier(0.39, 0.575, 0.565, 1);
-  color: #eee;
-  cursor: pointer;
-  &:hover {
-    background-color: #999;
-  }
-  &-small {
-    width: 100px;
-    font-size: 16px;   
-  }
-  &-large {
-    width: 160px;
-     font-size: 24px;
-  }
-  &-radius {
-    border-radius: 10px;
-  }
+@mixin full(){
+   width: 100vw;
+   height: 100vh;
 }
+
+
+section {
+  @include marginTop10();
+  width:300px;
+  @include boxcenter()
+}
+
+.wrapper {
+   @include marginTop10();
+   width:1200px;
+   @include boxcenter();
+}
+
+.banner {
+  @include full();
+}
+
+
