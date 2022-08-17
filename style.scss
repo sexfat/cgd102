@@ -177,20 +177,47 @@ $background_color : green;
      color: #fff; 
    }
 }
-
-.btn-default {
-  width: 100px;
-  padding: 10px 0;
-  background-color: #f20;
-  text-align: center;
-  color: #fff; 
-  // border: 1px solid #f20;
-  transition: all .3s ease;
-  cursor: pointer;
-  &:hover {
-    background-color: darken(#f20 , 10);
+@include t(){
+  .btn-default {
+    width: 100px;
+    padding: 10px 0;
+    background-color: #f20;
+    text-align: center;
     color: #fff; 
+    // border: 1px solid #f20;
+    transition: all .3s ease;
+    cursor: pointer;
+    &:hover {
+      background-color: darken(#f20 , 10);
+      color: #fff; 
+    }
   }
+}
+
+
+// body {
+//   padding: auto;
+//   @include t(){
+//     padding: 0 10px;
+//   }
+//   @include m(){
+//     padding: 0 30px;
+//   }
+
+// }
+
+
+.gray1{
+   background-color: #999;
+}
+.gray2{
+  background-color: #666;
+}
+
+@for $i from 1 through 100 {
+    .push_#{$i} {
+       margin-top: $i + px;
+    }
 }
 
 
