@@ -8,3 +8,18 @@ $title : h2;
 
 $m-min : 768px;
 $t-min : 996px;
+
+// 字體大小管理
+$titleFontsize: (
+  'h1' : 45px,
+  'h2' : 40px,
+  'h3' : 36px,
+  'h4' : 28px,
+  'h5' : 18px,
+  '.large-title' : 40px,
+  '.medium-title' : 30px,
+  '.small-title' : 26px,
+  'span' : 11px,
+  'ul li' : 20px ,
+  'body' : 16px
+);//map

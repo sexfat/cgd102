@@ -808,4 +808,28 @@ h4 {
 
 h5 {
   font-size: 18px;
+}
+
+.large-title {
+  font-size: 40px;
+}
+
+.medium-title {
+  font-size: 30px;
+}
+
+.small-title {
+  font-size: 26px;
+}
+
+span {
+  font-size: 11px;
+}
+
+ul li {
+  font-size: 20px;
+}
+
+body {
+  font-size: 16px;
 }/*# sourceMappingURL=style.css.map */
