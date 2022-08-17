@@ -788,4 +788,24 @@ h5 {
   background-position: center center;
   width: 100vw;
   height: 250px;
+}
+
+h1 {
+  font-size: 45px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+h4 {
+  font-size: 28px;
+}
+
+h5 {
+  font-size: 18px;
 }/*# sourceMappingURL=style.css.map */

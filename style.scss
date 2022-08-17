@@ -283,6 +283,34 @@ $background_color : green;
 }
 
 
+// $map : (
+//   key : val
+// )
+
+$titleFontsize: (
+  'h1' : 45px,
+  'h2' : 40px,
+  'h3' : 36px,
+  'h4' : 28px,
+  'h5' : 18px,
+);//map
+
+//map-get
+// h1 {
+//   font-size: map-get($titleFontsize, h4);
+// }
+
+
+@each $key , $val in $titleFontsize {
+   #{$key} {
+     font-size: $val;
+   }
+}
+
+
+
+
+
 
 
 
