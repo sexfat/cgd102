@@ -37,6 +37,7 @@
 };
 
 
+
 // @content
 @mixin space() {
     margin-top: 20px;
@@ -46,30 +47,19 @@
 
 @mixin layouts($layout) {
     @if $layout=="full" {
-      .wrapper_full {
-        width: 100%;
-        padding: 0 10px;
-        @content;
-      }
+        .wrapper_full {
+            width: 100%;
+            padding: 0 10px;
+            @content;
+        }
     }
-  
+
     @else {
-      .wrapper {
-        width: $layout;
-        margin: 0 auto;
-        @content;
-      }
+        .wrapper {
+            width: $layout;
+            margin: 0 auto;
+            @content;
+        }
     }
-  
-  }
 
-
-
-
-
-
-
-
-
-
-
+}

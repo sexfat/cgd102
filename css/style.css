@@ -136,27 +136,36 @@ section {
 }
 
 body, html {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 h1 {
-  font-size: 63px;
+  font-size: 68px;
 }
 
 h2 {
-  font-size: 53.2px;
+  font-size: 57px;
 }
 
 h3 {
-  font-size: 37.8px;
+  font-size: 41px;
 }
 
 h4 {
-  font-size: 25.2px;
+  font-size: 27px;
 }
 
 h5 {
-  font-size: 14px;
+  font-size: 15px;
 }
 
-/*# sourceMappingURL=style.css.map */
+.box_spec {
+  width: 100px;
+  height: 30px;
+  background-color: green;
+  cursor: pointer;
+  transition: all 0.1 ease;
+}
+.box_spec:hover {
+  background-color: #004d00;
+}/*# sourceMappingURL=style.css.map */
