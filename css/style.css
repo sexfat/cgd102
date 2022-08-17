@@ -191,4 +191,34 @@ h5 {
 }
 .btn_large:hover {
   background-color: #00e600;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.btn-outline {
+  width: 100px;
+  padding: 10px 0;
+  color: #f20;
+  text-align: center;
+  border: 1px solid #f20;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.btn-outline:hover {
+  background-color: #f20;
+  color: #fff;
+}
+
+.btn-default {
+  width: 100px;
+  padding: 10px 0;
+  background-color: #f20;
+  text-align: center;
+  color: #fff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.btn-default:hover {
+  background-color: #cc1b00;
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */
