@@ -73,26 +73,43 @@ $color : true;
 // layout
 @include layouts(1200px);
 
-  //運算
+//運算
 .box {
-  width:  10px + 10; // 單位不同 沒辦法運算
-  height:  100px - 10; //同上 
-  margin:  10px * 10; // 單位相同 沒辦相乘
+  width: 10px + 10; // 單位不同 沒辦法運算
+  height: 100px - 10; //同上 
+  margin: 10px * 10; // 單位相同 沒辦相乘
   //padding: (100 / 20) ;
 }
 
 $base_size : 13px;
 
 
-@mixin body_font-size($base_size){
-  body , html {
+@mixin body_font-size($base_size) {
+
+  body,
+  html {
     font-size: $base_size;
   }
-  h1 {font-size:   round($base_size * 4.5)  }
-  h2 {font-size: round($base_size * 3.8)}
-  h3 {font-size:round($base_size * 2.7) }
-  h4 {font-size:round($base_size * 1.8) }
-  h5 {font-size:round($base_size * 1) }
+
+  h1 {
+    font-size: round($base_size * 4.5)
+  }
+
+  h2 {
+    font-size: round($base_size * 3.8)
+  }
+
+  h3 {
+    font-size: round($base_size * 2.7)
+  }
+
+  h4 {
+    font-size: round($base_size * 1.8)
+  }
+
+  h5 {
+    font-size: round($base_size * 1)
+  }
 }
 
 @include body_font-size(15px);
@@ -100,16 +117,45 @@ $base_size : 13px;
 
 $background_color : green;
 
-.box_spec {
-   @include rect(100px , 30px);
-   background-color: $background_color;
-   cursor: pointer;
-   transition: all .1 ease;
-   &:hover {
-    // background-color:  lighten($background_color , 30);
-    background-color:  darken($background_color , 10);
+// .box_spec {
+//   @include rect(100px, 30px);
+//   background-color: $background_color;
+//   cursor: pointer;
+//   transition: all .1s ease;
 
-   }
-   
+//   &:hover {
+//     // background-color:  lighten($background_color , 30);
+//     background-color: darken($background_color, 10);
+//   }
+// }
+
+
+
+@mixin hover($class, $bgc) {
+  .#{$class} {
+    background-color: $bgc;
+    @content;
+    &:hover {
+      background-color: darken($bgc , 20);
+    }
+  }
 }
+
+@include hover(box_spec , #f20){
+  @include rect(100px , 30px);
+   cursor: pointer;
+   transition: all .3s ease; 
+};
+
+@include hover(btn_spec , green){
+  @include rect(120px , 30px);
+   cursor: pointer;
+   transition: all .3s ease; 
+};
+
+@include hover(btn_large , green){
+  @include rect(100% , 40px);
+   cursor: pointer;
+   transition: all .3s ease; 
+};
 
