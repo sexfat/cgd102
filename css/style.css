@@ -179,7 +179,7 @@ h5 {
   transition: all 0.3s ease;
 }
 .btn_spec:hover {
-  background-color: #001a00;
+  background-color: #00e600;
 }
 
 .btn_large {
@@ -190,5 +190,5 @@ h5 {
   transition: all 0.3s ease;
 }
 .btn_large:hover {
-  background-color: #001a00;
+  background-color: #00e600;
 }/*# sourceMappingURL=style.css.map */

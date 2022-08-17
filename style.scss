@@ -131,12 +131,17 @@ $background_color : green;
 
 
 
-@mixin hover($class, $bgc) {
+@mixin hover($class, $bgc ,$darken:true) {
   .#{$class} {
     background-color: $bgc;
     @content;
     &:hover {
+      @if $darken { 
       background-color: darken($bgc , 20);
+      }@else {
+        background-color: lighten($bgc , 20);
+         
+      }
     }
   }
 }
@@ -147,13 +152,13 @@ $background_color : green;
    transition: all .3s ease; 
 };
 
-@include hover(btn_spec , green){
+@include hover(btn_spec , green , false){
   @include rect(120px , 30px);
    cursor: pointer;
    transition: all .3s ease; 
 };
 
-@include hover(btn_large , green){
+@include hover(btn_large , green , false){
   @include rect(100% , 40px);
    cursor: pointer;
    transition: all .3s ease; 
