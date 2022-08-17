@@ -33,6 +33,20 @@
 };
 
 
+@mixin space(){
+    .space {
+      margin-top: 20px;
+      span {
+        @content;
+      }
+    }
+}
+
+
+@include space(){
+  font-size: 20px;
+}
+
 
 
 
