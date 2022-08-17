@@ -832,4 +832,44 @@ ul li {
 
 body {
   font-size: 16px;
+}
+
+.primary100 {
+  color: #017187;
+}
+
+.primary100-bg {
+  background-color: #017187;
+}
+
+.primary80 {
+  color: #67aab7;
+}
+
+.primary80-bg {
+  background-color: #67aab7;
+}
+
+.secondary100 {
+  color: #f5a9aa;
+}
+
+.secondary100-bg {
+  background-color: #f5a9aa;
+}
+
+.secondary80 {
+  color: #f7babb;
+}
+
+.secondary80-bg {
+  background-color: #f7babb;
+}
+
+.error {
+  color: #f20;
+}
+
+.error-bg {
+  background-color: #f20;
 }/*# sourceMappingURL=style.css.map */

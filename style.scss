@@ -301,6 +301,17 @@ $background_color : green;
    }
 }
 
+//color & bcg
+@each $key , $val in $fontColor {
+  .#{$key} {
+    color: $val
+  }
+  .#{$key}-bg{
+    background-color: $val;
+
+  }
+}
+
 
 
 
