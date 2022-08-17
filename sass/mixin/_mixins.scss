@@ -23,7 +23,7 @@
 // 手機板
 
 @mixin m() {
-    @media all and (min-width : $m-min) {
+    @media all and (max-width : $m-min) {
         
         @content
     }
@@ -32,7 +32,7 @@
 ;
 
 @mixin t() {
-    @media all and (min-width : $t-min) {
+    @media all and (max-width : $t-min) {
        
         @content
     }

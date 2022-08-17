@@ -253,3 +253,40 @@ $background_color : green;
   @include grid(12 , -xs)
 }
 
+// $list : ad01 , ad02 , ad03 ; // list
+
+
+// each
+
+
+@mixin banner($list){
+  @each $i in $list {
+    .banner_#{$i} {
+      background-image: url('images/#{$i}.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      @content;    
+    }
+  }
+}
+
+
+@include banner(ad1 ad2){
+  width: 100vw;
+  height: 100vh;
+}
+
+@include banner(ad3 ad4){
+  width: 100vw;
+  height: 250px;
+}
+
+
+
+
+
+
+
+
+
