@@ -1,12 +1,5 @@
 @charset "UTF-8";
 /*css 註解*/
-.space {
-  margin-top: 20px;
-}
-.space span {
-  font-size: 20px;
-}
-
 .btn {
   text-align: center;
   font-size: 18px;
@@ -120,4 +113,50 @@ section {
 .banner {
   width: 100vw;
   height: 100vh;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.space {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.color {
+  color: black;
+}
+
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.box {
+  width: 20px;
+  height: 90px;
+  margin: 100px;
+}
+
+body, html {
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 63px;
+}
+
+h2 {
+  font-size: 53.2px;
+}
+
+h3 {
+  font-size: 37.8px;
+}
+
+h4 {
+  font-size: 25.2px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=style.css.map */

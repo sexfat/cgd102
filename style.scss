@@ -21,7 +21,7 @@
 @import 'sass/page/about';
 
 
- // mixin
+// mixin
 
 
 
@@ -29,7 +29,7 @@
 
 section {
   @include marginTop10();
-  @include rect(100vw , 300px);
+  @include rect(100vw, 300px);
   @include boxcenter()
 }
 
@@ -37,9 +37,9 @@ section {
 
 
 .wrapper {
-   @include marginTop10();
-   width:1200px;
-   @include boxcenter();
+  @include marginTop10();
+  width: 1200px;
+  @include boxcenter();
 }
 
 .banner {
@@ -47,3 +47,53 @@ section {
 }
 
 
+.space {
+  @include space() {
+    width: 100%;
+  }
+}
+
+// 判斷式   @if @else if @else
+
+$color : true;
+
+.color {
+  @if $color {
+    color: black
+  }
+
+  @else {
+    color: white
+  }
+}
+
+
+
+
+// layout
+@include layouts(1200px);
+
+  //運算
+.box {
+  width:  10px + 10; // 單位不同 沒辦法運算
+  height:  100px - 10; //同上 
+  margin:  10px * 10; // 單位相同 沒辦相乘
+  //padding: (100 / 20) ;
+}
+
+$base_size : 13px;
+
+
+@mixin body_font-size($base_size){
+  body , html {
+    font-size: $base_size;
+  }
+  h1 {font-size:$base_size * 4.5}
+  h2 {font-size: $base_size * 3.8}
+  h3 {font-size:$base_size * 2.7 }
+  h4 {font-size:$base_size * 1.8 }
+  h5 {font-size:$base_size * 1 }
+}
+
+
+@include body_font-size(14px)

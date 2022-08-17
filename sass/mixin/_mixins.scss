@@ -1,51 +1,72 @@
-@mixin marginTop10(){
+@mixin marginTop10() {
     margin-top: 10px;
- }
- 
- 
- @mixin boxcenter(){
-     margin: 0 auto;
- }
- 
- @mixin full(){
+}
+
+
+@mixin boxcenter() {
+    margin: 0 auto;
+}
+
+@mixin full() {
     width: 100vw;
     height: 100vh;
- }
- 
- // mixin 帶變數/ 帶null /帶預設值
- @mixin rect($w , $h:$w){
-   width: $w;
-   height: $h;
- };
+}
+
+// mixin 帶變數/ 帶null /帶預設值
+@mixin rect($w, $h:$w) {
+    width: $w;
+    height: $h;
+}
+
+;
 
 // 手機板
 
-@mixin m(){
+@mixin m() {
     @media all and (min-width : $m-min) {
-       @content
+        @content
     }
-};
+}
 
-@mixin t(){
+;
+
+@mixin t() {
     @media all and (min-width : $t-min) {
-       @content
+        @content
     }
 };
 
 
-@mixin space(){
-    .space {
-      margin-top: 20px;
-      span {
+// @content
+@mixin space() {
+    margin-top: 20px;
+    @content;
+}
+
+
+@mixin layouts($layout) {
+    @if $layout=="full" {
+      .wrapper_full {
+        width: 100%;
+        padding: 0 10px;
         @content;
       }
     }
-}
+  
+    @else {
+      .wrapper {
+        width: $layout;
+        margin: 0 auto;
+        @content;
+      }
+    }
+  
+  }
 
 
-@include space(){
-  font-size: 20px;
-}
+
+
+
 
 
 
