@@ -43,3 +43,13 @@ exports.sync =  parallel( taskA ,  taskB);
 
 // 非同步
 exports.async = series(taskA , taskB);
+
+// 壓縮 美化css
+const cleanCSS = require('gulp-clean-css');
+
+function minicss(){
+   return src('src/css/style.css')
+          .pipe(cleanCSS())
+          .pipe(dest('dest/css'))
+}
+
