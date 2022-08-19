@@ -1,0 +1,13 @@
+@import 'base/font';
+@import 'base/color';
+@import 'layout/header';
+
+
+body {
+   font-size: $basicSize;
+   background-color: $white;
+   .wrapper{
+       width: 1200px;
+       margin: 0 auto;
+   }
+}

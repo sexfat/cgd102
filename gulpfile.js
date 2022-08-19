@@ -104,3 +104,21 @@ function htmltemplate(){
 }
 
 exports.html = htmltemplate;
+
+
+
+// sass 
+
+const sass = require('gulp-sass')(require('sass'));
+
+
+function styleSass() {
+    return src('./src/sass/*.scss')
+        .pipe(sass.sync().on('error', sass.logError))
+        .pipe(dest('./dest/css'));
+}
+
+exports.style = styleSass;
+
+
+
