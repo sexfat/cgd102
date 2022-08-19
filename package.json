@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "安裝套件": "npm i",
-    "專案開發": "gulp dev",
+    "專案開發": "gulp",
     "mac專用安裝": "sudo npm i"
   },
   "repository": {
