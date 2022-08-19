@@ -17,9 +17,10 @@
     "url": "https://github.com/sexfat/cgd102/issues"
   },
   "homepage": "https://github.com/sexfat/cgd102#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
   "dependencies": {
-    "bootstrap": "^5.2.0",
-    "jquery": "^3.6.0",
-    "swiper": "^8.3.2"
+    "jquery": "^3.6.0"
   }
 }
