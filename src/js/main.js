@@ -1,6 +1,6 @@
-let x = 10;
+let x = 20;
 
 function aa(){
-  return x * 10;
+  return x * 20;
 }
 

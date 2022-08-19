@@ -120,10 +120,18 @@ function styleSass() {
 
 exports.style = styleSass;
 
+// 圖片搬家
+function img(){
+    return src('src/images/*.*').pipe('dest/images')
+}
+
+
 
 function w(){
   watch(['./src/sass/*.scss' , './src/sass/**/*.scss'], styleSass);
   watch(['./src/*.html' , './src/layout/*.html'], htmltemplate);
+  watch(['./src/js/*.js' , './src/js/**/*.js'], ugJS);
+  watch(['./src/images/*.*' , './src/images/**/*.*'], img);
 }
 
 exports.dev = w;
