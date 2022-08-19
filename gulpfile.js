@@ -121,4 +121,12 @@ function styleSass() {
 exports.style = styleSass;
 
 
+function w(){
+  watch(['./src/sass/*.scss' , './src/sass/**/*.scss'], styleSass);
+  watch(['./src/*.html' , './src/layout/*.html'], htmltemplate);
+}
+
+exports.dev = w;
+
+
 
