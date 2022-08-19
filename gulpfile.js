@@ -60,10 +60,14 @@ exports.minCss = minicss;
 //壓縮js 
 
 const uglify = require('gulp-uglify'); 
+const rename = require('gulp-rename');
 
 function ugJS(){
-   return src('src/js/*.js')
-          .pipe(uglify())
+   return src('src/js/*.js') //來源
+          .pipe(uglify()) //函式
+          .pipe(rename({
+            extname: '.min.js'
+           }))
           .pipe(dest('dest/js'))
 }
 
@@ -71,18 +75,17 @@ exports.miniJs = ugJS;
 
 
 // 改名
-const rename = require('gulp-rename');
+// const rename = require('gulp-rename');
+// function change(){
+//     return src('dest/js/*.js')
+//            .pipe(rename({
+//             extname: '.min.js'
+//            }))
+//            .pipe(dest('dest/js/'))
 
-function change(){
-    return src('dest/js/*.js')
-           .pipe(rename({
-            extname: '.min.js'
-           }))
-           .pipe(dest('dest/js/'))
+// }
 
-}
-
-exports.js = series(ugJS ,change) //先執行壓縮js 再更名min.js
-
+//exports.js = series(ugJS ,change) //先執行壓縮js 再更名min.js
+exports.js = ugJS
 
 

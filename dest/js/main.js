@@ -1,1 +1,0 @@
-let x=10;function aa(){return 10*x}
