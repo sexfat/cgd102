@@ -134,7 +134,30 @@ function w(){
   watch(['./src/images/*.*' , './src/images/**/*.*'], img);
 }
 // 先打包在監看變動
-exports.dev = series(parallel(htmltemplate , styleSass ,ugJS, img) , w)  
+exports.dev = series(parallel(htmltemplate , styleSass ,ugJS, img) , w)
+
+
+// 瀏覽器同步
+const browserSync = require('browser-sync');
+const reload = browserSync.reload;
+
+
+function browser(done) {
+    browserSync.init({
+        server: {
+            baseDir: "./dest",
+            index: "index.html"
+        },
+        port: 3000
+    });
+    watch(['./src/sass/*.scss' , './src/sass/**/*.scss'], styleSass).on('change' ,reload)
+    watch(['./src/*.html' , './src/layout/*.html'], htmltemplate).on('change' ,reload)
+    watch(['./src/js/*.js' , './src/js/**/*.js'], ugJS).on('change' ,reload)
+    watch(['./src/images/*.*' , './src/images/**/*.*'], img).on('change' ,reload)
+    done();
+}
+
+exports.default = browser;
 
 
 
