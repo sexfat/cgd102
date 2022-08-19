@@ -57,7 +57,7 @@ function minicss(){
 exports.minCss = minicss;
 
 
-//壓縮js 
+//壓縮js  改名
 
 const uglify = require('gulp-uglify'); 
 const rename = require('gulp-rename');
@@ -89,3 +89,18 @@ exports.miniJs = ugJS;
 exports.js = ugJS
 
 
+
+// html template
+
+const fileinclude = require('gulp-file-include');
+
+function htmltemplate(){
+   return src('src/*.html')
+          .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file'
+          }))
+          .pipe(dest('dest/'))
+}
+
+exports.html = htmltemplate;
