@@ -48,8 +48,23 @@ exports.async = series(taskA , taskB);
 const cleanCSS = require('gulp-clean-css');
 
 function minicss(){
-   return src('src/css/style.css')
-          .pipe(cleanCSS())
-          .pipe(dest('dest/css'))
+   return src('src/css/*.css') //來源檔案
+//    return src(['src/css/*.css' , 'src/a/*.css']) // 多個不同路徑
+          .pipe(cleanCSS())//編譯方法
+          .pipe(dest('dest/css'))//目的地
 }
 
+exports.minCss = minicss;
+
+
+//壓縮js 
+
+const uglify = require('gulp-uglify'); 
+
+function ugJS(){
+   return src('src/js/*.js')
+          .pipe(uglify())
+          .pipe(dest('dest/js'))
+}
+
+exports.miniJs = ugJS;
