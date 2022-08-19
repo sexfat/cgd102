@@ -25,3 +25,21 @@ function move(){
 
 exports.mv = move;
 
+
+// 
+function taskA(cb) {
+    console.log('a mission');
+    cb();
+}
+
+
+function taskB(cb) {
+    console.log('b mission');
+    cb();
+}
+
+//同步
+exports.sync =  parallel( taskA ,  taskB);
+
+// 非同步
+exports.async = series(taskA , taskB);
