@@ -122,7 +122,7 @@ exports.style = styleSass;
 
 // 圖片搬家
 function img(){
-    return src('src/images/*.*').pipe('dest/images')
+    return src('src/images/*.*').pipe(dest('dest/images'))
 }
 
 
@@ -133,8 +133,8 @@ function w(){
   watch(['./src/js/*.js' , './src/js/**/*.js'], ugJS);
   watch(['./src/images/*.*' , './src/images/**/*.*'], img);
 }
-
-exports.dev = w;
+// 先打包在監看變動
+exports.dev = series(parallel(htmltemplate , styleSass ,ugJS, img) , w)  
 
 
 
