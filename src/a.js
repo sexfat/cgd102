@@ -1,6 +1,8 @@
+// jquery
 import $ from 'jquery';
 $('body').css('background-color' , 'green');
 
+// gsap
 import { gsap } from "gsap";
 
 gsap.to('.box' , {
