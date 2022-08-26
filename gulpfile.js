@@ -177,11 +177,26 @@ exports.default = series(parallel(htmltemplate, styleSass, ugJS, img), browser);
 const autoprefixer = require('gulp-autoprefixer');
 
 function prefix() {
-    return src('dest/css/*.css').pipe(autoprefixer({
+    return src('dest/css/*.css')
+    .pipe(autoprefixer({
         cascade: false
-    })).pipe(dest('dest/autoprefix'))
+    })).pipe(rename({
+        extname: '.autoprefix.css'
+    }))
+    .pipe(dest('dest/css'))
 }
 exports.auto = prefix;
+
+// 壓圖 
+const imagemin = require('gulp-imagemin');
+
+function img_c(){
+    return src('src/images/*.*')
+    .pipe(imagemin())
+    .pipe(dest('dest/images'))
+}
+
+exports.images = img_c;
 
 
 
