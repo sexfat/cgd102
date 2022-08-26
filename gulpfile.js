@@ -18,8 +18,8 @@ function task(cb) {
 exports.do = task
 
 //任務 檔案搬家
-function move(){
-   return src('src/index.html').pipe(dest('dest'))
+function move() {
+    return src('src/index.html').pipe(dest('dest'))
 }
 
 
@@ -39,19 +39,19 @@ function taskB(cb) {
 }
 
 //同步
-exports.sync =  parallel( taskA ,  taskB);
+exports.sync = parallel(taskA, taskB);
 
 // 非同步
-exports.async = series(taskA , taskB);
+exports.async = series(taskA, taskB);
 
 // 壓縮 美化css
 const cleanCSS = require('gulp-clean-css');
 
-function minicss(){
-   return src('src/css/*.css') //來源檔案
-//    return src(['src/css/*.css' , 'src/a/*.css']) // 多個不同路徑
-          .pipe(cleanCSS())//編譯方法
-          .pipe(dest('dest/css'))//目的地
+function minicss() {
+    return src('src/css/*.css') //來源檔案
+        //    return src(['src/css/*.css' , 'src/a/*.css']) // 多個不同路徑
+        .pipe(cleanCSS())//編譯方法
+        .pipe(dest('dest/css'))//目的地
 }
 
 exports.minCss = minicss;
@@ -59,16 +59,16 @@ exports.minCss = minicss;
 
 //壓縮js  改名
 
-const uglify = require('gulp-uglify'); 
+const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 
-function ugJS(){
-   return src('src/js/*.js') //來源
-          .pipe(uglify()) //函式
-          .pipe(rename({
+function ugJS() {
+    return src('src/js/*.js') //來源
+        .pipe(uglify()) //函式
+        .pipe(rename({
             extname: '.min.js'
-           }))
-          .pipe(dest('dest/js'))
+        }))
+        .pipe(dest('dest/js'))
 }
 
 exports.miniJs = ugJS;
@@ -94,13 +94,13 @@ exports.js = ugJS
 
 const fileinclude = require('gulp-file-include');
 
-function htmltemplate(){
-   return src('src/*.html')
-          .pipe(fileinclude({
+function htmltemplate() {
+    return src('src/*.html')
+        .pipe(fileinclude({
             prefix: '@@',
             basepath: '@file'
-          }))
-          .pipe(dest('dest/'))
+        }))
+        .pipe(dest('dest/'))
 }
 
 exports.html = htmltemplate;
@@ -121,31 +121,31 @@ function styleSass() {
 exports.style = styleSass;
 
 // 圖片搬家
-function img(){
+function img() {
     return src('src/images/*.*').pipe(dest('dest/images'))
 }
 
 
 
-function w(){
-  watch(['./src/sass/*.scss' , './src/sass/**/*.scss'], styleSass);
-  watch(['./src/*.html' , './src/layout/*.html'], htmltemplate);
-  watch(['./src/js/*.js' , './src/js/**/*.js'], ugJS);
-  watch(['./src/images/*.*' , './src/images/**/*.*'], img);
+function w() {
+    watch(['./src/sass/*.scss', './src/sass/**/*.scss'], styleSass);
+    watch(['./src/*.html', './src/layout/*.html'], htmltemplate);
+    watch(['./src/js/*.js', './src/js/**/*.js'], ugJS);
+    watch(['./src/images/*.*', './src/images/**/*.*'], img);
 }
 // 先打包在監看變動
-exports.dev = series(parallel(htmltemplate , styleSass ,ugJS, img) , w)
+exports.dev = series(parallel(htmltemplate, styleSass, ugJS, img), w)
 
 // 多隻css整合
 var concat = require('gulp-concat');
 
-function concatcss(){
-    return src(['dest/css/*.css' , '!dest/css/all.css'])
-    .pipe(concat('all.css'))
-    .pipe(dest('dest/css/'))
+function concatcss() {
+    return src(['dest/css/*.css', '!dest/css/all.css'])
+        .pipe(concat('all.css'))
+        .pipe(dest('dest/css/'))
 }
 
-exports.allcss  = concatcss;
+exports.allcss = concatcss;
 
 
 
@@ -162,14 +162,35 @@ function browser(done) {
         },
         port: 3000
     });
-    watch(['./src/sass/*.scss' , './src/sass/**/*.scss'], styleSass).on('change' ,reload)
-    watch(['./src/*.html' , './src/layout/*.html'], htmltemplate).on('change' ,reload)
-    watch(['./src/js/*.js' , './src/js/**/*.js'], ugJS).on('change' ,reload)
-    watch(['./src/images/*.*' , './src/images/**/*.*'], img).on('change' ,reload)
+    watch(['./src/sass/*.scss', './src/sass/**/*.scss'], styleSass).on('change', reload)
+    watch(['./src/*.html', './src/layout/*.html'], htmltemplate).on('change', reload)
+    watch(['./src/js/*.js', './src/js/**/*.js'], ugJS).on('change', reload)
+    watch(['./src/images/*.*', './src/images/**/*.*'], img).on('change', reload)
     done();
 }
 
-exports.default = series(parallel(htmltemplate , styleSass ,ugJS, img) , browser);
+exports.default = series(parallel(htmltemplate, styleSass, ugJS, img), browser);
+
+
+//上線使用  css跨瀏覽器
+ 
+const autoprefixer = require('gulp-autoprefixer');
+
+function prefix() {
+    return src('dest/css/*.css').pipe(autoprefixer({
+        cascade: false
+    })).pipe(dest('dest/autoprefix'))
+}
+exports.auto = prefix;
+
+
+
+
+
+
+
+
+
 
 
 
