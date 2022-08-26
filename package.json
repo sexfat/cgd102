@@ -8,7 +8,7 @@
     "專案開發": "gulp",
     "mac專用安裝": "sudo npm i",
     "css整合上線用": "gulp allcss",
-    "上線壓圖" : "gulp images"
+    "上線壓圖": "gulp images"
   },
   "repository": {
     "type": "git",
@@ -22,9 +22,12 @@
   },
   "homepage": "https://github.com/sexfat/cgd102#readme",
   "devDependencies": {
+    "@babel/core": "^7.18.13",
+    "@babel/preset-env": "^7.18.10",
     "browser-sync": "^2.27.10",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-file-include": "^2.3.0",

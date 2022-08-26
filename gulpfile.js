@@ -199,6 +199,21 @@ function img_c(){
 exports.images = img_c;
 
 
+// es6- es5
+
+const babel = require('gulp-babel');
+
+function babel5() {
+    return src('src/js/*.js')
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(dest('dest/js'));
+}
+
+exports.js = babel5;
+
+
 
 
 
