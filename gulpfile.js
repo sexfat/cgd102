@@ -225,7 +225,7 @@ exports.cls  = clear;
 
 
 // 上線用
-exports.online = series()
+exports.online = series(clear, parallel(htmltemplate, styleSass,babel5 , img_c))
 
 
 
