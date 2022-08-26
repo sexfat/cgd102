@@ -5,5 +5,5 @@ function aa(){
 }
 
 // js arrow es6
-const func = x => x +1;
+const a = x => x +1;
 
