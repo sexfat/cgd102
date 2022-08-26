@@ -1,5 +1,8 @@
 // jquery
 import $ from 'jquery';
+import './css/style.css';
+import './css/header.css';
+
 $('body').css('background-color' , 'green');
 
 // gsap
