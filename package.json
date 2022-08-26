@@ -6,7 +6,8 @@
   "scripts": {
     "安裝套件": "npm i",
     "專案開發": "gulp",
-    "mac專用安裝": "sudo npm i"
+    "mac專用安裝": "sudo npm i",
+    "css整合上線用": "gulp allcss"
   },
   "repository": {
     "type": "git",
@@ -27,7 +28,8 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
-    "sass": "^1.54.4"
+    "sass": "^1.54.4",
+    "gulp-concat": "^2.6.1"
   },
   "dependencies": {
     "jquery": "^3.6.0"

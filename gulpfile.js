@@ -136,6 +136,18 @@ function w(){
 // 先打包在監看變動
 exports.dev = series(parallel(htmltemplate , styleSass ,ugJS, img) , w)
 
+// 多隻css整合
+var concat = require('gulp-concat');
+
+function concatcss(){
+    return src(['dest/css/*.css' , '!dest/css/all.css'])
+    .pipe(concat('all.css'))
+    .pipe(dest('dest/css/'))
+}
+
+exports.allcss  = concatcss;
+
+
 
 // 瀏覽器同步
 const browserSync = require('browser-sync');
