@@ -141,7 +141,7 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!\n * jQ
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/style.css */ \"./src/css/style.css\");\n/* harmony import */ var _css_header_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./css/header.css */ \"./src/css/header.css\");\n/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gsap */ \"./node_modules/gsap/index.js\");\n// jquery\r\n\r\n\r\n\r\n\r\njquery__WEBPACK_IMPORTED_MODULE_0___default()('body').css('background-color' , 'green');\r\n\r\n// gsap\r\n\r\n\r\ngsap__WEBPACK_IMPORTED_MODULE_3__[\"gsap\"].to('.box' , {\r\n   x : 400,\r\n   y: 300,\r\n   rotation : 180,\r\n   duration: 5\r\n})\r\n\r\n\r\nconsole.log('webpack go');\r\nconst x = 100;\r\nconsole.log(x);\n\n//# sourceURL=webpack:///./src/a.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _css_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./css/style.scss */ \"./src/css/style.scss\");\n/* harmony import */ var _css_header_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./css/header.css */ \"./src/css/header.css\");\n/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gsap */ \"./node_modules/gsap/index.js\");\n// jquery\r\n\r\n// sass\r\n\r\n//css\r\n\r\n\r\njquery__WEBPACK_IMPORTED_MODULE_0___default()('body').css('background-color' , 'green');\r\n\r\n// gsap\r\n\r\n\r\ngsap__WEBPACK_IMPORTED_MODULE_3__[\"gsap\"].to('.box' , {\r\n   x : 400,\r\n   y: 300,\r\n   rotation : 180,\r\n   duration: 5\r\n})\r\n\r\n\r\nconsole.log('webpack go');\r\nconst x = 100;\r\nconsole.log(x);\n\n//# sourceURL=webpack:///./src/a.js?");
 
 /***/ }),
 
@@ -157,15 +157,15 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
-/***/ "./src/css/style.css":
-/*!***************************!*\
-  !*** ./src/css/style.css ***!
-  \***************************/
+/***/ "./src/css/style.scss":
+/*!****************************!*\
+  !*** ./src/css/style.scss ***!
+  \****************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./src/css/style.css?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./src/css/style.scss?");
 
 /***/ })
 

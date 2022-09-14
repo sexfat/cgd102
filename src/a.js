@@ -1,6 +1,8 @@
 // jquery
 import $ from 'jquery';
-import './css/style.css';
+// sass
+import './css/style.scss';
+//css
 import './css/header.css';
 
 $('body').css('background-color' , 'green');

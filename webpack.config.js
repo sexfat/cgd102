@@ -11,22 +11,22 @@ module.exports = {
         filename: '[name].js'
       },            // 出口文件
       module: {
-              rules: [{
-                  // 格式
-                  test: /\.css$/,
-                  //順序是由下到上 css > style
-                  use: [{
-                      loader: MiniCssExtractPlugin.loader,
-                      options: {
-                        publicPath: './dist'
-                      }
-                    },
-                      //'style-loader', 會跟原本的衝突 
-                      'css-loader'
-                  ],
-              }]
-      
-          } ,           // 處裡對應模組
+        rules: [{
+            // 格式
+            test: /\.(sass|scss|css)$/,
+            //順序是由下到上 sass > css > style
+            use: [{
+                loader: MiniCssExtractPlugin.loader,
+                options: {
+                  publicPath: './dist'
+                }
+              },
+                'css-loader',
+                'sass-loader'
+            ],
+        }]
+
+    }, 
           plugins: [
             new MiniCssExtractPlugin({
                 filename: "./[name].css"
