@@ -14,7 +14,7 @@
   },
   "scripts": {
     "安裝套件": "npm i",
-    "服務器安裝" : "npm install webpack-dev-server@3.11.3 -g",
+    "服務器全域安裝" : "npm install webpack-dev-server@3.11.3 -g",
     "dev開發": "webpack",
     "瀏覽器開啟" : "webpack-dev-server",
     "上線用"    : "webpack -p"
