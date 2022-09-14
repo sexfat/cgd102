@@ -1,11 +1,11 @@
 // jquery
-import $ from 'jquery';
+// import $ from 'jquery';
 // sass
 import './css/style.scss';
 //css
 import './css/header.css';
 
-$('body').css('background-color' , '#eee');
+$('body').css('background-color' , 'green');
 
 // gsap
 import { gsap } from "gsap";

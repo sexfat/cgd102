@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack  = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {
@@ -20,22 +21,42 @@ module.exports = {
         rules: [{
             // 格式
             test: /\.(sass|scss|css)$/,
-            //順序是由下到上 sass > css > style
+            //順序是由下到上 css > style
             use: [{
-                loader: MiniCssExtractPlugin.loader,
-                options: {
-                    publicPath: './dist'
-                }
-            },
+                    loader: MiniCssExtractPlugin.loader,
+                    options: {
+                      publicPath: './dist'
+                    }
+                  },
+                // 'style-loader',//跟MiniCssExtractPlugin 會衝突所以要關掉
                 'css-loader',
                 'sass-loader'
             ],
-        }]
+        },
+        //babel loader
+        {
+            test: /\.(js)$/,
+            exclude: /(node_modules)/,
+
+            use: [{
+                loader: 'babel-loader',
+                options: {
+                    presets: ['@babel/preset-env']
+                }
+            }],
+            include: path.resolve(__dirname, 'src'),
+        },
+
+      ]
 
     },
     plugins: [
          //清理舊的檔案
         new CleanWebpackPlugin(),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+        }),
         // css
         new MiniCssExtractPlugin({
             filename: "./[name].css"
