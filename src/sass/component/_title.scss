@@ -1,0 +1,22 @@
+.title_master {
+   font-size: 30px;
+   @include m(){
+      font-size: 40px;
+   }
+   @include t(){
+       font-size: 36px;
+   }
+   &::after {
+
+   }
+   &::before {
+
+   }
+}
+
+
+.title_underline {
+     font-size: 28px;
+     border-bottom: 1px solid #333 ;
+}
+
