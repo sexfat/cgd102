@@ -53,6 +53,7 @@ module.exports = {
     plugins: [
          //清理舊的檔案
         new CleanWebpackPlugin(),
+        // 全域使用jquery
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery'
